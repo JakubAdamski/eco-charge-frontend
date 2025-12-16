@@ -1,25 +1,29 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.css';
+import { DailyMixCharts } from './components/DailyMixCharts';
+import { ChargingOptimizer } from './components/ChargingOptimizer';
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+      <div className="App" style={{ maxWidth: '1200px', margin: '0 auto', padding: '20px' }}>
+        <header style={{ textAlign: 'center', marginBottom: '40px' }}>
+          <h1>EcoCharge Dashboard 🇬🇧</h1>
+          <p>Monitor the UK energy mix and charge your car ecologically.</p>
+        </header>
+
+        <main>
+
+          <section>
+            <DailyMixCharts />
+          </section>
+
+          <hr style={{ margin: '40px 0' }} />
+
+          <section style={{ maxWidth: '600px', margin: '0 auto' }}>
+            <ChargingOptimizer />
+          </section>
+        </main>
+      </div>
   );
 }
 

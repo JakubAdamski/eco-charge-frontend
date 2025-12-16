@@ -2,7 +2,7 @@ import axios from 'axios';
 import { DailyEnergyMix, ChargingWindowResponse } from '../types/energy';
 
 
-const API_URL = 'const API_URL = \'https://eco-charge-backend.onrender.com/api/energy';
+const API_URL = 'https://eco-charge-backend.onrender.com/api/energy';
 
 export const energyService = {
 
